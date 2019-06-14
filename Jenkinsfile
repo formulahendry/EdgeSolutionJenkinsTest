@@ -13,6 +13,6 @@ node {
       azureIoTEdgeGenConfig defaultPlatform: 'amd64', deploymentFilePath: 'config/deployment.json', deploymentManifestFilePath: 'deployment.template.json'
    }
    stage('Deploy') {
-      azureIoTEdgeDeploy azureCredentialsId: 'JunServicePrincipal', deploymentFilePath: 'config/deployment.json', deploymentId: 'deploy001', deploymentType: 'single', deviceId: 'py-sample', iothubName: 'azure-iot-toolkit-test', priority: '10', resourceGroup: 'azure-iot-edge', targetCondition: ''
+      azureIoTEdgeDeploy azureCredentialsId: 'JunServicePrincipal', deploymentFilePath: 'config/deployment.json', deploymentId: "deploy00${env.BUILD_NUMBER}", deploymentType: 'single', deviceId: 'py-sample', iothubName: 'azure-iot-toolkit-test', priority: '10', resourceGroup: 'azure-iot-edge', targetCondition: ''
    }
 }
