@@ -55,7 +55,8 @@
             "version": "1.0",
             "type": "docker",
             "status": "running",
-            "restartPolicy": "always",
+            "restartPolicy": "always",            
+            "customValue": "${TESTENV}",
             "settings": {
               "image": "mcr.microsoft.com/azureiotedge-simulated-temperature-sensor:1.0",
               "createOptions": {}
